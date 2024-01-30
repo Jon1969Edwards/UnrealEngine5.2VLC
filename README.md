@@ -1,6 +1,6 @@
 # VLCMedia Plugin for Unreal Engine 5.2.1
 
-Unreal Engine 5 Media Framework plug-in using the Video LAN Codec (libvlc).
+Unreal Engine 5.2.1 Media Framework plug-in using the Video LAN Codec (libvlc).
 
 
 ## About
@@ -52,7 +52,7 @@ For Mac and Windows, the following nightly builds are currently included:
 
 Nightly builds can be downloaded from the VideoLAN web site (see below).
 
-For debugging on Win32 and Win64, you can download debug builds and replace the
+For debugging on Win64, you can download debug builds and replace the
 corresponding files and folders in the *VlcMedia/ThirdParty/vlc/* directory.
 
 ### Linux (Ubuntu 16.04)
@@ -78,7 +78,7 @@ and work out of the box.
 ## Dependencies
 
 This plug-in requires Visual Studio and either a C++ code project or the full
-Unreal Engine 4 source code from GitHub. If you are new to programming in UE,
+Unreal Engine 5.2.1 source code from GitHub. If you are new to programming in UE,
 please see the official [Programming Guide](https://docs.unrealengine.com/latest/INT/Programming/index.html)! 
 
 
