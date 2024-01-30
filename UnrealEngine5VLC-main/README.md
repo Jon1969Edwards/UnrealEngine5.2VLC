@@ -1,4 +1,4 @@
-# VlcMedia
+# VLCMedia Plugin for Unreal Engine 5.2.1
 
 Unreal Engine 5 Media Framework plug-in using the Video LAN Codec (libvlc).
 
@@ -6,7 +6,7 @@ Unreal Engine 5 Media Framework plug-in using the Video LAN Codec (libvlc).
 ## About
 Thanks to Timo Helmers for this plugin.
 
-I just adapted and built this plug-in for Unreal Engine 5.1.0
+I just adapted and built this plug-in for Unreal Engine 5.2.1
 
 This plug-in is still under development and likely has a lot of remaining issues
 to be fixed. Use in production is not yet recommended.
@@ -18,11 +18,9 @@ that are not yet available in the UE5 Master branch.
 
 ## Supported Platforms
 
-This plug-in was last built against **Unreal Engine 5.1.0** and tested
+This plug-in was last built against **Unreal Engine 5.2.1** and tested
 against the following platforms:
 
-- ~~Linux (Ubuntu 16.04)~~
-- ~~Mac~~
 - Windows x64
 
 **IMPORTANT**: Please note that this repository contains pre-compiled binaries
