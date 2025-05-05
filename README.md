@@ -1,4 +1,4 @@
-# VLCMedia Plugin for Unreal Engine 5.2.1
+# VLCMedia Plugin for Live TV in Unreal Engine 5.2.1
 
 Unreal Engine 5.2.1 Media Framework plug-in using the Video LAN Codec (libvlc).
 
