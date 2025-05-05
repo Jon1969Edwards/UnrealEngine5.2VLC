@@ -4,8 +4,6 @@ Unreal Engine 5.2.1 Media Framework plug-in using the Video LAN Codec (libvlc).
 
 
 ## About
-Thanks to Timo Helmers for this plugin.
-
 I just adapted and built this plug-in for Unreal Engine 5.2.1
 
 This plug-in is still under development and likely has a lot of remaining issues
