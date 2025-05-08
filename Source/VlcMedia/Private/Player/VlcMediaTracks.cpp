@@ -2,7 +2,7 @@
 
 #include "VlcMediaTracks.h"
 #include "Vlc.h"
-
+#include "VlcMediaPrivate.h"
 #include "MediaHelpers.h"
 
 

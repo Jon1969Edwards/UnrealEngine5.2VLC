@@ -11,6 +11,7 @@
 	"Category" : "Media Players",
 	"EnabledByDefault" : true,
 	"IsBetaVersion": true,
+	"EngineVersion": "5.4.4",
 
 	"Modules" :
 	[

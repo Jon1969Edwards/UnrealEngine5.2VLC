@@ -8,6 +8,7 @@
 #include "Math/IntPoint.h"
 #include "Misc/Timespan.h"
 #include "Templates/SharedPointer.h"
+#include "IMediaTimeStamp.h"
 
 
 /**
@@ -147,7 +148,7 @@ public:
 
 	virtual FMediaTimeStamp GetTime() const override
 	{
-		return Time;
+		return FMediaTimeStamp(Time); // ✅ Wrap in FMediaTimeStamp
 	}
 
 	virtual bool IsCacheable() const override
