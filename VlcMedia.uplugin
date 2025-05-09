@@ -12,11 +12,11 @@
 	"EnabledByDefault" : false,
 	"IsBetaVersion": true,
 	"CompatibleEngineVersions": [
-  {
-    "MajorVersion": 5,
-    "MinorVersion": 4
-  }
-]
+		{
+			"MajorVersion": 5,
+			"MinorVersion": 4
+		}
+	],
 
 	"Modules" :
 	[
@@ -32,7 +32,7 @@
 			"LoadingPhase" : "PostEngineInit"
 		},
 		{
-			"Name" : "VlcMediaFactory",
+			"Name" : "VlcMediaFactoryEditor",
 			"Type" : "Editor",
 			"LoadingPhase" : "PostEngineInit"
 		},
