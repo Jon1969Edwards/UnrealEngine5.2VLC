@@ -34,4 +34,4 @@ A media framework plugin for Unreal Engine 5.4.4 that enables playback of a wide
 
 ## Credits
 - Original plugin by Timo Helmers
-- Adapted for Unreal Engine 5.4.4 by Jon Edwards
+- Adapted for Unreal Engine 5.4.4 by Jon Edwards with help from his 8 year old son Charles.
