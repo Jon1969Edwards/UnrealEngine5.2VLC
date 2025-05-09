@@ -32,7 +32,7 @@
 			"LoadingPhase" : "PostEngineInit"
 		},
 		{
-			"Name" : "VlcMediaFactoryEditor",
+			"Name" : "VlcMediaFactory",
 			"Type" : "Editor",
 			"LoadingPhase" : "PostEngineInit"
 		},
