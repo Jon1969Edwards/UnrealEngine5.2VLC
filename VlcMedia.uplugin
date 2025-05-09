@@ -11,7 +11,12 @@
 	"Category" : "Media Players",
 	"EnabledByDefault" : false,
 	"IsBetaVersion": true,
-	"EngineVersion": "5.4.4",
+	"CompatibleEngineVersions": [
+  {
+    "MajorVersion": 5,
+    "MinorVersion": 4
+  }
+]
 
 	"Modules" :
 	[
