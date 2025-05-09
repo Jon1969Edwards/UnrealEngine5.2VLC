@@ -7,7 +7,7 @@
 	"CreatedBy" : "Virtual World Resources",
 	"CreatedByURL" : "https://www.vwr.dev/",
 	"DocsURL" : "https://github.com/Jon1969Edwards/UnrealEngine5.2VLC/tree/UE5point4",
-	"Description" : A media framework plugin for Unreal Engine 5.4.4 using VideoLAN (VLC).",
+	"Description" : "A media framework plugin for Unreal Engine 5.4.4 using VideoLAN (VLC).",
 	"Category" : "Media Players",
 	"EnabledByDefault" : false,
 	"IsBetaVersion": true,
