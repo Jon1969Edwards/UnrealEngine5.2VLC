@@ -8,7 +8,6 @@
 #include "Math/IntPoint.h"
 #include "Misc/Timespan.h"
 #include "Templates/SharedPointer.h"
-#include "IMediaTimeStamp.h"
 
 
 /**
