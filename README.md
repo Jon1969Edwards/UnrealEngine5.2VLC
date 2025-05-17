@@ -92,7 +92,7 @@ If you use it as an Engine plug-in, clone this repository into the
 */Engine/Plugins/Media* directory and compile your game. Full Unreal Engine 5.0.0 Preview2
 source code from GitHub is required for this.
 
-
+<a href='https://ko-fi.com/Z8Z81F4OEC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Beer at ko-fi.com' /></a>
 ## References
 
 * [VideoLAN Homepage](http://videolan.org)
