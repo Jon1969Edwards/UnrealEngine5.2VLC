@@ -4,7 +4,7 @@ namespace UnrealBuildTool.Rules
 {
     using System.IO;
 
-    public class VlcMedia : ModuleRules
+    public class  : ModuleRules
     {
         public VlcMedia(ReadOnlyTargetRules Target) : base(Target)
         {

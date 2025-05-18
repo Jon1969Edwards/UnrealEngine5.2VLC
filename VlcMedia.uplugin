@@ -1,6 +1,6 @@
 {
 	"FileVersion" : 3,
-	
+	"Name": "VlcMedia",
 	"FriendlyName" : "VLC Media Player",
 	"Version" : 15,
 	"VersionName" : "15.0",
