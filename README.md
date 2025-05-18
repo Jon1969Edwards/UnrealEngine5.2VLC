@@ -24,6 +24,10 @@ A media framework plugin for Unreal Engine 5.4.4 that enables playback of a wide
 4. Use the MediaTexture in your materials (e.g., on a TV mesh).
 5. Control playback via Blueprints or C++.
 
+## Documentation
+
+[![Documentation][docs-badge]][docs]
+
 ## Support
 - For issues, please open an issue on the plugin's GitHub page or contact the author.
 - Check the [Wiki documentation](https://github.com/Jon1969Edwards/VlcMedia_UnrealEngine/wiki/%F0%9F%8F%A0-Home)
