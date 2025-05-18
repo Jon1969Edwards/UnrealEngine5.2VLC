@@ -1,4 +1,4 @@
-# VLC Media Plugin for Unreal Engine 5.4.4
+# VLC Media Plugin for Unreal Engine 5.4.4 [WIP]
 
 ## Description
 A media framework plugin for Unreal Engine 5.4.4 that enables playback of a wide range of video and audio formats using the VideoLAN (VLC) library. Supports network streams, local files, and advanced codecs not natively supported by Unreal.
@@ -31,6 +31,8 @@ A media framework plugin for Unreal Engine 5.4.4 that enables playback of a wide
 ## Licensing
 - This plugin is distributed under the MIT License (see LICENSE file).
 - VLC binaries are distributed under the LGPL. See `ThirdParty/vlc` for details and licensing information.
+
+<a href='https://ko-fi.com/Z8Z81F4OEC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Beer at ko-fi.com' /></a>
 
 ## Credits
 - Original plugin by Timo Helmers
