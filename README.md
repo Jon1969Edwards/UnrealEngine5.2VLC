@@ -26,6 +26,7 @@ A media framework plugin for Unreal Engine 5.4.4 that enables playback of a wide
 
 ## Support
 - For issues, please open an issue on the plugin's GitHub page or contact the author.
+- Check the [Wiki documentation](https://github.com/Jon1969Edwards/VlcMedia_UnrealEngine/wiki/%F0%9F%8F%A0-Home)
 - Check the [VideoLAN documentation](https://www.videolan.org/doc/) for supported formats.
 
 ## Licensing
