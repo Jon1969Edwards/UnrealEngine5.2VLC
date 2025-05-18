@@ -2,7 +2,7 @@
 
 #include "VlcMediaTracks.h"
 #include "Vlc.h"
-
+#include "VlcMediaPrivate.h"
 #include "MediaHelpers.h"
 
 
@@ -361,6 +361,7 @@ bool FVlcMediaTracks::SelectTrack(EMediaTrackType TrackType, int32 TrackIndex)
 			UE_LOG(LogVlcMedia, Verbose, TEXT("Tracks %p: Failed to %s audio track %i (id %i)"), this, (TrackId == -1) ? TEXT("disable") : TEXT("enable"), TrackIndex, TrackId);
 			return false;
 		}
+		break;
 
 	case EMediaTrackType::Caption:
 		if (CaptionTracks.IsValidIndex(TrackIndex))
@@ -381,6 +382,7 @@ bool FVlcMediaTracks::SelectTrack(EMediaTrackType TrackType, int32 TrackIndex)
 			UE_LOG(LogVlcMedia, Verbose, TEXT("Tracks %p: Failed to %s caption track %i (id %i)"), this, (TrackId == -1) ? TEXT("disable") : TEXT("enable"), TrackIndex, TrackId);
 			return false;
 		}
+		break;
 
 	case EMediaTrackType::Video:
 		if (VideoTracks.IsValidIndex(TrackIndex))
@@ -407,6 +409,7 @@ bool FVlcMediaTracks::SelectTrack(EMediaTrackType TrackType, int32 TrackIndex)
 			UE_LOG(LogVlcMedia, Verbose, TEXT("Tracks %p: Failed to %s video track %i (id %i)"), this, (TrackId == -1) ? TEXT("disable") : TEXT("enable"), TrackIndex, TrackId);
 			return false;
 		}
+		break;
 
 	default:
 		return false; // unsupported track type

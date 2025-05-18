@@ -7,10 +7,9 @@
 	#include "Developer/Settings/Public/ISettingsSection.h"
 #endif
 
-#include "Runtime/Core/Public/Core.h"
-#include "Runtime/Core/Public/Modules/ModuleManager.h"
-#include "Runtime/CoreUObject/Public/CoreUObject.h"
-#include "Runtime/Media/Public/IMediaModule.h"
-#include "Runtime/Media/Public/IMediaOptions.h"
+#include "CoreMinimal.h"
+#include "Modules/ModuleManager.h"
+#include "Media/IMediaModule.h"
+#include "Media/IMediaOptions.h"
 
 #include "../../VlcMedia/Public/IVlcMediaModule.h"
