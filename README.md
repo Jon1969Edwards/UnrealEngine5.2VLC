@@ -1,100 +1,39 @@
-# VLCMedia Plugin for Live TV in Unreal Engine 5.2.1 [WIP]
+# VLC Media Plugin for Unreal Engine 5.2.1 and 5.4.4 [WIP]
 
-Unreal Engine 5.2.1 Media Framework plug-in using the Video LAN Codec (libvlc).
+## Description
+A media framework plugin for Unreal Engine 5.4.4 that enables playback of a wide range of video and audio formats using the VideoLAN (VLC) library. Supports network streams, local files, and advanced codecs not natively supported by Unreal.
 
+## Features
+- Play network streams (RTSP, HLS, MPEG-TS, etc.) and local files
+- Supports a wide range of codecs via VLC
+- Works on Windows (Win64)
+- Blueprint and C++ integration
+- MediaTexture and MediaSound support
 
-## About
-I just adapted and built this plug-in for Unreal Engine 5.2.1
-
-This plug-in is still under development and likely has a lot of remaining issues
-to be fixed. Use in production is not yet recommended.
-
-Make sure to pull the *Tag* that matches your Unreal Engine version. If you sync
-to *Master* the code may not compile, because it may depend on Engine changes
-that are not yet available in the UE5 Master branch.
-
-
-## Supported Platforms
-
-This plug-in was last built against **Unreal Engine 5.2.1** and tested
-against the following platforms:
-
-- Windows x64
-
-**IMPORTANT**: Please note that this repository contains pre-compiled binaries
-for libvlc and its plug-ins, which are licensed under LGPL. This means that you
-cannot create monolithic builds of your game without violating LGPL, the UE
-EULA or both. The libvlc libraries must remain dynamic libraries that are bound
-at run-time - static linking is not allowed - and the licensing related files in
-*/ThirdParty/vlc* must be retained.
-
-This also means that this plug-in cannot work on platforms that do not support
-dynamically linked libraries (i.e. iOS, HTML5) or do not currently implement
-support for it (i.e. Android, XboxOne).
-
-Epic is in the process of adding plug-in support to monolithic builds, but there
-is no ETA yet. Once this is supported, you will be able to distribute monolithic
-game and server builds with VlcMedia, provided that the libvlc libraries and
-plug-ins remain as separate DLLs.
-
-
-## Prerequisites
-
-A relatively recent version of libvlc is required. The latest stable release
-(currently 2.2.1) is not sufficient.
-
-For Mac and Windows, the following nightly builds are currently included:
-* macOS: vlc-4.0.0-20180319-0303-dev
-* Win32: vlc-4.0.0-20180319-0303-dev-win32
-* Win64: vlc-4.0.0-20180319-1331-dev-win64
-
-Nightly builds can be downloaded from the VideoLAN web site (see below).
-
-For debugging on Win64, you can download debug builds and replace the
-corresponding files and folders in the *VlcMedia/ThirdParty/vlc/* directory.
-
-### Linux (Ubuntu 16.04)
---NOT TESTED--
-A suitable version of **libvlc** must be installed or compiled from source. If
-you ship your game on Linux, you will likely want to include libvlc with it, so
-that users don't have to install it themselves. We will eventually include those
-binaries in this repository, although it is not clear what distros should be
-supported and where the builds are coming from. A better workflow needs to be
-established for this (https://github.com/ue4plugins/VlcMedia/issues/17).
-
-To clean up, clone, make and install VLC (including libvlc) into your project,
-run the *VlcMedia/Build/Vlc4LinuxCloneMakeInstall.sh* script from within your
-project's root folder. If you later need to make and re-install VLC from the
-existing VLC code, run the *Vlc4LinuxMakeInstall.sh* script instead.
-
-### Mac(NOT TESTED), Windows
-
-All required libraries and plug-ins are included in the *ThirdParty* directory
-and work out of the box.
-
-
-## Dependencies
-
-This plug-in requires Visual Studio and either a C++ code project or the full
-Unreal Engine 5.2.1 source code from GitHub. If you are new to programming in UE,
-please see the official [Programming Guide](https://docs.unrealengine.com/latest/INT/Programming/index.html)! 
-
+## Installation
+1. Extract the plugin folder into your project's `Plugins` directory.
+2. Ensure the `ThirdParty/vlc/Win64` folder contains `libvlc.dll` and `libvlccore.dll`.
+3. Open your project in Unreal Engine 5.4.4. If prompted, rebuild the plugin.
+4. Enable the plugin in Edit > Plugins if not already enabled.
+5. Restart the editor.
 
 ## Usage
+1. Create a new VLC Media Player asset (right-click in Content Browser > Media > VLC Media Player).
+2. Assign a Media Source (URL or file) to the player.
+3. Create a MediaTexture and link it to the VLC Media Player.
+4. Use the MediaTexture in your materials (e.g., on a TV mesh).
+5. Control playback via Blueprints or C++.
 
-You can use this plug-in as a project plug-in, or an Engine plug-in.
+## Support
+- For issues, please open an issue on the plugin's GitHub page or contact the author.
+- Check the [VideoLAN documentation](https://www.videolan.org/doc/) for supported formats.
 
-If you use it as a project plug-in, clone this repository into your project's
-*/Plugins* directory and compile your game in Visual Studio. A C++ code project
-is required for this to work.
+## Licensing
+- This plugin is distributed under the MIT License (see LICENSE file).
+- VLC binaries are distributed under the LGPL. See `ThirdParty/vlc` for details and licensing information.
 
-If you use it as an Engine plug-in, clone this repository into the
-*/Engine/Plugins/Media* directory and compile your game. Full Unreal Engine 5.0.0 Preview2
-source code from GitHub is required for this.
+## Credits
+- Original plugin by Timo Helmers
+- Adapted for Unreal Engine 5.4.4 by Jon Edwards with help from his 8 year old son Charles.
 
 <a href='https://ko-fi.com/Z8Z81F4OEC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Beer at ko-fi.com' /></a>
-## References
-
-* [VideoLAN Homepage](http://videolan.org)
-* [VideoLAN Nightly Builds](http://nightlies.videolan.org/)
-* [Introduction to UE4 Plugins](https://wiki.unrealengine.com/An_Introduction_to_UE4_Plugins)
