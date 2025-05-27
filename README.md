@@ -9,13 +9,20 @@ A media framework plugin for Unreal Engine 5.4.4 that enables playback of a wide
 - Works on Windows (Win64)
 - Blueprint and C++ integration
 - MediaTexture and MediaSound support
+- Packaged plugin ready for distribution (no need to compile from source)
 
 ## Installation
-1. Extract the plugin folder into your project's `Plugins` directory.
+
+### Option A: Use the Packaged Plugin
+1. Extract the contents of the `PackagedPlugins/VlcMedia` folder into your project's `Plugins` directory.
 2. Ensure the `ThirdParty/vlc/Win64` folder contains `libvlc.dll` and `libvlccore.dll`.
-3. Open your project in Unreal Engine 5.4.4. If prompted, rebuild the plugin.
-4. Enable the plugin in Edit > Plugins if not already enabled.
+3. Open your project in Unreal Engine 5.4.4.
+4. Enable the plugin under **Edit > Plugins** if not already enabled.
 5. Restart the editor.
+
+### Option B: Use the Source Plugin (Developers)
+1. Extract the source plugin into your project's `Plugins` folder.
+2. Follow the same steps above and rebuild the project if prompted.
 
 ## Usage
 1. Create a new VLC Media Player asset (right-click in Content Browser > Media > VLC Media Player).
@@ -25,7 +32,6 @@ A media framework plugin for Unreal Engine 5.4.4 that enables playback of a wide
 5. Control playback via Blueprints or C++.
 
 ## Documentation
-
 [Wiki documentation](https://github.com/Jon1969Edwards/VlcMedia_UnrealEngine/wiki/%F0%9F%8F%A0-Home)
 
 ## Support
