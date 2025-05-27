@@ -1,0 +1,7 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\VlcMediaFactory\\Module.VlcMediaFactory.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\VlcMediaFactory\\VlcMediaFactoryModule.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\VlcMediaFactory\\VlcMediaFactorySettings.cpp.obj"
+	]
+}

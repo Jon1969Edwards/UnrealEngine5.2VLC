@@ -1,48 +1,45 @@
 {
-	"FileVersion" : 3,
-	"Name": "VlcMedia",
-	"FriendlyName" : "VLC Media Player",
-	"Version" : 16,
-	"VersionName" : "16.0",
-	"CreatedBy" : "Virtual World Resources",
-	"CreatedByURL" : "https://www.vwr.dev/",
-	"DocsURL" : "https://github.com/Jon1969Edwards/UnrealEngine5.2VLC/tree/UE5point4",
-	"Description" : "A media framework plugin for Unreal Engine 5.4.4 using VideoLAN (VLC).",
-	"Category" : "Media Players",
-	"EnabledByDefault" : false,
+	"FileVersion": 3,
+	"Version": 16,
+	"VersionName": "16.0",
+	"FriendlyName": "VLC Media Player",
+	"Description": "A media framework plugin for Unreal Engine 5.4.4 using VideoLAN (VLC).",
+	"Category": "Media Players",
+	"CreatedBy": "Virtual World Resources",
+	"CreatedByURL": "https://www.vwr.dev/",
+	"DocsURL": "https://github.com/Jon1969Edwards/UnrealEngine5.2VLC/tree/UE5point4",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "5.4.0",
+	"CanContainContent": true,
 	"IsBetaVersion": true,
-	"CompatibleEngineVersions": [
+	"Installed": true,
+	"Modules": [
 		{
-			"MajorVersion": 5,
-			"MinorVersion": 4
-		}
-	],
-
-	"Modules" :
-	[
-		{
-			"Name" : "VlcMedia",
-			"Type" : "RuntimeNoCommandlet",
-			"LoadingPhase" : "PreLoadingScreen",
-			"WhitelistPlatforms" : [ "Win64" ]
+			"Name": "VlcMedia",
+			"Type": "RuntimeNoCommandlet",
+			"LoadingPhase": "PreLoadingScreen",
+			"PlatformAllowList": [
+				"Win64"
+			]
 		},
 		{
-			"Name" : "VlcMediaEditor",
-			"Type" : "Editor",
-			"LoadingPhase" : "PostEngineInit"
+			"Name": "VlcMediaEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
 		},
 		{
-			"Name" : "VlcMediaFactory",
-			"Type" : "Editor",
-			"LoadingPhase" : "PostEngineInit"
+			"Name": "VlcMediaFactory",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
 		},
 		{
 			"Name": "VlcMediaFactory",
 			"Type": "RuntimeNoCommandlet",
-			"LoadingPhase" : "PostEngineInit",
-			"WhitelistPlatforms" : [ "Win64" ]
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [
+				"Win64"
+			]
 		}
-	],
-
-	"CanContainContent" : false
+	]
 }

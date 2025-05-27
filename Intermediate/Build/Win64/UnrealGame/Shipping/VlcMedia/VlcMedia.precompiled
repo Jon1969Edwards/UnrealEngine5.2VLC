@@ -1,0 +1,12 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\VlcMedia\\VlcMediaModule.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\VlcMedia\\VlcMediaCallbacks.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\VlcMedia\\VlcMediaPlayer.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\VlcMedia\\VlcMediaSource.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\VlcMedia\\VlcMediaTracks.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\VlcMedia\\VlcMediaView.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\VlcMedia\\VlcMediaUtils.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Shipping\\VlcMedia\\Vlc.cpp.obj"
+	]
+}
