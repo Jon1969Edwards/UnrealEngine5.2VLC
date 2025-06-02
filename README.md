@@ -10,7 +10,7 @@ Place `BP_TV` in your level, set its channel index and list, and the stream will
 
 🧠 **Blueprint logic overview** (included in the plugin):
 
-![BP_TV Autoplay Logic](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/docs/BP_TV_AutoPlay.png)
+![BP_TV Autoplay Logic](https://raw.githubusercontent.com/Jon1969Edwards/VlcMedia_UnrealEngine/main/docs/BP_TV_AutoPlay.png)
 
 (Replace with actual hosted image URL or embed relative image if packaging with docs.)
 
