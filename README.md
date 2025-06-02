@@ -12,8 +12,6 @@ Place `BP_TV` in your level, set its channel index and list, and the stream will
 
 ![BP_TV Autoplay Logic](https://raw.githubusercontent.com/Jon1969Edwards/VlcMedia_UnrealEngine/main/docs/BP_TV_AutoPlay.png)
 
-(Replace with actual hosted image URL or embed relative image if packaging with docs.)
-
 ### 2. Configuring Channels in BP_TV
 
 Inside the Blueprint `BP_TV`:
