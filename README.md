@@ -73,8 +73,6 @@ The following Blueprint handles media loading and playback:
 
 ![TV Blueprint](https://raw.githubusercontent.com/Jon1969Edwards/VlcMedia_UnrealEngine/main/docs/BP_TV_AutoPlay.png)
 
-If the image above does not load, make sure the `docs/BP_TV_AutoPlay.png` file is in your GitHub repository.
-
 ---
 
 ## 📌 Notes
