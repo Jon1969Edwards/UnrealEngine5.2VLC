@@ -1,87 +1,94 @@
-## ▶️ Usage Guide
+# 📺 VlcMedia Plugin for Unreal Engine
 
-### 1. Included TV Blueprint (Auto-Start)
-
-The plugin includes a ready-to-use Blueprint: **`BP_TV`**, designed to automatically play media when the game starts. You can find it in:
-
-📂 `Plugins/VlcMedia/Content/BP_TV`
-
-Place `BP_TV` in your level, set its channel index and list, and the stream will auto-play on BeginPlay.
-
-🧠 **Blueprint logic overview** (included in the plugin):
-
-![BP_TV Autoplay Logic](https://raw.githubusercontent.com/Jon1969Edwards/VlcMedia_UnrealEngine/main/docs/BP_TV_AutoPlay.png)
-
-### 2. Configuring Channels in BP_TV
-
-Inside the Blueprint `BP_TV`:
-- `ChannelList`: An array of Stream Media Source assets (M3U8, RTSP, etc.).
-- `ChannelIndex`: Selects which channel to open and play on BeginPlay.
-
-🧩 The Blueprint binds to `OnMediaOpened`, opens the selected stream, and plays it when ready.
+This plugin enables Unreal Engine to stream video content using VLC Media Player functionality. Designed for Blueprint-only projects, it includes everything you need to drop in and start playing streaming `.m3u8` sources with no source compilation required.
 
 ---
 
-### 3. Full Manual Setup (Build Your Own Actor)
+## ✅ Features
 
-If you want to build your own actor manually, here’s how:
-
-#### Step-by-step:
-
-1. **Create a VLC Media Player**
-   - Right-click in Content Browser → *Media > VLC Media Player*
-   - Name it (e.g., `MyMediaPlayer`)
-
-2. **Create a Stream Media Source**
-   - Right-click → *Media > Stream Media Source*
-   - Name it and enter a stream URL (e.g., `http://yourstream.m3u8`)
-
-3. **Create a Media Texture**
-   - Right-click → *Materials & Textures > Media Texture*
-   - Assign `MyMediaPlayer` as its Media Player
-
-4. **Create a Material**
-   - Create a new Material (e.g., `M_TVScreen`)
-   - Use the Media Texture as the base color input
-   - Set Material Domain to *Surface* and Blend Mode to *Opaque*
-
-5. **Create a Display Mesh**
-   - Use a Static Mesh (like a plane or TV screen model)
-   - Apply the material to display the stream
-
-6. **Blueprint Setup**
-   - In your Actor Blueprint:
-     - Add `Media Sound` and `Static Mesh` components
-     - Assign `MyMediaPlayer` to both the Media Sound and Media Texture
-     - Use the following logic:
-       - On BeginPlay:
-         - `Open Source` with the Stream Media Source
-         - Optionally bind to `OnMediaOpened` to then call `Play`
+- Stream `.m3u8` and live video URLs in UE 5.4+
+- Auto-play support via included `BP_TV` Blueprint
+- Packaged plugin — no C++ compilation needed
+- Integrates MediaPlayer, Texture, and Material setup automatically
 
 ---
 
-### 📽️ Tutorial Reference
+## 📦 Installation
 
-This setup follows the approach in this tutorial:  
-🔗 [RTSP Livestream Media in Unreal Engine](https://www.youtube.com/watch?v=nNNzUf3zNjM)
+1. Download or clone the plugin into your project's `Plugins/` folder:
 
----
+YourProject/
+└── Plugins/
+└── VlcMedia/
 
-### 📁 Directory Structure
 
-Your plugin should include the following (after packaging):
+2. The directory should look like this after packaging:
 
 Plugins/
 └── VlcMedia/
+├── Binaries/
+├── Config/
 ├── Content/
 │ ├── BP_TV.uasset
-│ └── YourMediaAssets...
+│ ├── YourMediaAssets...
 ├── Resources/
-├── Config/
-├── Binaries/
-├── README.md
-└── VlcMedia.uplugin
+├── VlcMedia.uplugin
+└── README.md
 
 
+3. Open or restart your Unreal project.
+4. Enable the plugin if it is not already auto-loaded.
+5. Done! Ready to drag and drop the TV Blueprint into the world.
 
-> ✅ Note: The packaged plugin is precompiled. No need for source rebuilds in Blueprint-only projects.
+> ✅ **Note:** No need to build or compile C++ modules. This is a precompiled, packaged plugin.
+
+---
+
+## 🧠 Setup Guide
+
+This setup follows [this tutorial](https://www.youtube.com/watch?v=nNNzUf3zNjM&t=2s) for Blueprint-based media playback using streaming URLs.
+
+### 1. Included Blueprint: `BP_TV`
+
+Drag the `BP_TV` Blueprint into your level. It auto-plays video on BeginPlay using an index from a predefined Media Source array.
+
+#### 🔧 To customize:
+- Open `BP_TV`
+- Replace the default entries in the `ChannelList` array with your own `Stream Media Source` assets.
+- Adjust the `ChannelIndex` integer variable to select which one auto-plays.
+
+### 2. Blueprint Logic
+
+The following Blueprint handles media loading and playback:
+
+![TV Blueprint](https://raw.githubusercontent.com/Jon1969Edwards/VlcMedia_UnrealEngine/main/docs/BP_TV_AutoPlay.png)
+
+If the image above does not load, make sure the `docs/BP_TV_AutoPlay.png` file is in your GitHub repository.
+
+---
+
+## 📌 Notes
+
+- If playback fails, check that:
+- Your `.m3u8` or stream URL is public and working
+- VLC is installed and supported (used under-the-hood)
+- Media Source is properly assigned
+
+- StreamMediaSources used in Blueprints must be stored in the main `Content/` folder (not inside the plugin) unless manually linked.
+
+---
+
+## 🧪 Example Streams (For Testing)
+
+Use any of these publicly accessible streams:
+- [NASA TV](https://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8)
+- [DW English](https://dwstream4-lh.akamaihd.net/i/dwstream4_live@123456/master.m3u8)
+
+> ⚠️ Some streams may block cross-origin requests. Use trusted sources for production.
+
+---
+
+## 📃 License
+
+This plugin is proprietary and intended for distribution via the Unreal Engine Marketplace.  
+All rights reserved. Redistribution or resale outside of the Marketplace is prohibited.
