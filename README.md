@@ -19,6 +19,7 @@ This plugin enables Unreal Engine to stream video content using VLC Media Player
 
 YourProject/
 └── Plugins/
+
 └── VlcMedia/
 
 
@@ -26,13 +27,21 @@ YourProject/
 
 Plugins/
 └── VlcMedia/
+
 ├── Binaries/
+
 ├── Config/
+
 ├── Content/
+
 │ ├── BP_TV.uasset
+
 │ ├── YourMediaAssets...
+
 ├── Resources/
+
 ├── VlcMedia.uplugin
+
 └── README.md
 
 
