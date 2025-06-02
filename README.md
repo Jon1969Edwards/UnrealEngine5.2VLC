@@ -1,51 +1,52 @@
-# VLC Media Plugin for Unreal Engine 5.2.1 and 5.4.4 [WIP]
+## ▶️ Usage Guide
 
-## Description
-A media framework plugin for Unreal Engine 5.4.4 that enables playback of a wide range of video and audio formats using the VideoLAN (VLC) library. Supports network streams, local files, and advanced codecs not natively supported by Unreal.
+### 1. Included TV Blueprint (Auto-Start)
 
-## Features
-- Play network streams (RTSP, HLS, MPEG-TS, etc.) and local files
-- Supports a wide range of codecs via VLC
-- Works on Windows (Win64)
-- Blueprint and C++ integration
-- MediaTexture and MediaSound support
-- Packaged plugin ready for distribution (no need to compile from source)
+This plugin includes a preconfigured Blueprint actor (`BP_TV`) that automatically plays a stream on game start. No extra setup is required other than placing the actor into your level.
 
-## Installation
+- **Location:** `Plugins/VlcMedia/Content/BP_TV`
+- **Function:** When placed in the scene, the TV automatically starts playback of the selected stream.
 
-### Option A: Use the Packaged Plugin
-1. Extract the contents of the `VlcMedia` folder into your project's `Plugins` directory.
-2. Ensure the `ThirdParty/vlc/Win64` folder contains `libvlc.dll` and `libvlccore.dll`.
-3. Open your project in Unreal Engine 5.4.4.
-4. Enable the plugin under **Edit > Plugins** if not already enabled.
-5. Restart the editor.
+This Blueprint includes logic for:
+- Automatically binding to `OnMediaOpened`
+- Selecting a stream from the `ChannelList` using `ChannelIndex`
+- Opening the stream and triggering playback
 
-### Option B: Use the Source Plugin (Developers)
-1. Extract the source plugin into your project's `Plugins` folder.
-2. Follow the same steps above and rebuild the project if prompted.
+### 2. Assigning Channels
 
-## Usage
-1. Create a new VLC Media Player asset (right-click in Content Browser > Media > VLC Media Player).
-2. Assign a Media Source (URL or file) to the player.
-3. Create a MediaTexture and link it to the VLC Media Player.
-4. Use the MediaTexture in your materials (e.g., on a TV mesh).
-5. Control playback via Blueprints or C++.
+Inside `BP_TV`:
+- Use the `ChannelList` array variable to define one or more Stream Media Sources (e.g., `.m3u8`, RTSP URLs).
+- Set the `ChannelIndex` to select which channel to play at runtime.
 
-## Documentation
-[Wiki documentation](https://github.com/Jon1969Edwards/VlcMedia_UnrealEngine/wiki/%F0%9F%8F%A0-Home)
+> 💡 Example: Set `ChannelList[0]` to an RTSP or M3U8 stream and `ChannelIndex = 0` to play it when the game begins.
 
-## Support
-- For issues, please open an issue on the plugin's GitHub page or contact the author.
-- Check the [Wiki documentation](https://github.com/Jon1969Edwards/VlcMedia_UnrealEngine/wiki/%F0%9F%8F%A0-Home)
-- Check the [VideoLAN documentation](https://www.videolan.org/doc/) for supported formats.
+---
 
-## Licensing
-- This plugin is distributed under the MIT License (see LICENSE file).
-- VLC binaries are distributed under the LGPL. See `ThirdParty/vlc` for details and licensing information.
+### 3. Optional: Create Your Own Setup
 
-## Credits
-- Original plugin by Timo Helmers
-- Adapted for Unreal Engine 5.4.4 by Jon Edwards with help from his 8 year old son Charles.
-- This plugin is open-source under the BSD 3-Clause license and is not affiliated with Epic Games.
+If you'd like to configure your own setup manually, follow these steps:
 
-- <a href='https://ko-fi.com/Z8Z81F4OEC' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Beer at ko-fi.com' /></a>
+1. **Create a VLC Media Player Asset**
+   - Right-click → **Media > VLC Media Player**
+   - Name it (e.g., `MyVLCPlayer`)
+
+2. **Create a Stream Media Source**
+   - Right-click → **Media > Stream Media Source**
+   - Enter your stream URL (e.g., `http://yourstream.m3u8`)
+
+3. **Create Media Texture & Material**
+   - Create a **Media Texture** → assign `MyVLCPlayer`
+   - Create a **Material** using the texture and apply it to a mesh
+
+4. **Control Playback with Blueprints**
+   - Use the nodes:
+     - `Open Source`
+     - `Play`
+     - (Optional) `Bind Event to On Media Opened`
+
+---
+
+### 🎬 Reference
+
+This setup is inspired by the [Tutorial RTSP Livestream Media in Unreal Engine](https://www.youtube.com/watch?v=nNNzUf3zNjM). The auto-start logic is now embedded in the included `BP_TV` actor for ease of use.
+
