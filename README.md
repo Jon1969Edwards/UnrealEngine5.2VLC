@@ -18,6 +18,7 @@ This plugin enables Unreal Engine to stream video content using VLC Media Player
 1. Download or clone the plugin into your project's `Plugins/` folder:
 
 YourProject/
+
 └── Plugins/
 
 └── VlcMedia/
