@@ -71,3 +71,17 @@ This setup follows the approach in this tutorial:
 
 Your plugin should include the following (after packaging):
 
+Plugins/
+└── VlcMedia/
+├── Content/
+│ ├── BP_TV.uasset
+│ └── YourMediaAssets...
+├── Resources/
+├── Config/
+├── Binaries/
+├── README.md
+└── VlcMedia.uplugin
+
+
+
+> ✅ Note: The packaged plugin is precompiled. No need for source rebuilds in Blueprint-only projects.
