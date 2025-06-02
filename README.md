@@ -2,51 +2,74 @@
 
 ### 1. Included TV Blueprint (Auto-Start)
 
-This plugin includes a preconfigured Blueprint actor (`BP_TV`) that automatically plays a stream on game start. No extra setup is required other than placing the actor into your level.
+The plugin includes a ready-to-use Blueprint: **`BP_TV`**, designed to automatically play media when the game starts. You can find it in:
 
-- **Location:** `Plugins/VlcMedia/Content/BP_TV`
-- **Function:** When placed in the scene, the TV automatically starts playback of the selected stream.
+📂 `Plugins/VlcMedia/Content/BP_TV`
 
-This Blueprint includes logic for:
-- Automatically binding to `OnMediaOpened`
-- Selecting a stream from the `ChannelList` using `ChannelIndex`
-- Opening the stream and triggering playback
+Place `BP_TV` in your level, set its channel index and list, and the stream will auto-play on BeginPlay.
 
-### 2. Assigning Channels
+🧠 **Blueprint logic overview** (included in the plugin):
 
-Inside `BP_TV`:
-- Use the `ChannelList` array variable to define one or more Stream Media Sources (e.g., `.m3u8`, RTSP URLs).
-- Set the `ChannelIndex` to select which channel to play at runtime.
+![BP_TV Autoplay Logic](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/docs/BP_TV_AutoPlay.png)
 
-> 💡 Example: Set `ChannelList[0]` to an RTSP or M3U8 stream and `ChannelIndex = 0` to play it when the game begins.
+(Replace with actual hosted image URL or embed relative image if packaging with docs.)
+
+### 2. Configuring Channels in BP_TV
+
+Inside the Blueprint `BP_TV`:
+- `ChannelList`: An array of Stream Media Source assets (M3U8, RTSP, etc.).
+- `ChannelIndex`: Selects which channel to open and play on BeginPlay.
+
+🧩 The Blueprint binds to `OnMediaOpened`, opens the selected stream, and plays it when ready.
 
 ---
 
-### 3. Optional: Create Your Own Setup
+### 3. Full Manual Setup (Build Your Own Actor)
 
-If you'd like to configure your own setup manually, follow these steps:
+If you want to build your own actor manually, here’s how:
 
-1. **Create a VLC Media Player Asset**
-   - Right-click → **Media > VLC Media Player**
-   - Name it (e.g., `MyVLCPlayer`)
+#### Step-by-step:
+
+1. **Create a VLC Media Player**
+   - Right-click in Content Browser → *Media > VLC Media Player*
+   - Name it (e.g., `MyMediaPlayer`)
 
 2. **Create a Stream Media Source**
-   - Right-click → **Media > Stream Media Source**
-   - Enter your stream URL (e.g., `http://yourstream.m3u8`)
+   - Right-click → *Media > Stream Media Source*
+   - Name it and enter a stream URL (e.g., `http://yourstream.m3u8`)
 
-3. **Create Media Texture & Material**
-   - Create a **Media Texture** → assign `MyVLCPlayer`
-   - Create a **Material** using the texture and apply it to a mesh
+3. **Create a Media Texture**
+   - Right-click → *Materials & Textures > Media Texture*
+   - Assign `MyMediaPlayer` as its Media Player
 
-4. **Control Playback with Blueprints**
-   - Use the nodes:
-     - `Open Source`
-     - `Play`
-     - (Optional) `Bind Event to On Media Opened`
+4. **Create a Material**
+   - Create a new Material (e.g., `M_TVScreen`)
+   - Use the Media Texture as the base color input
+   - Set Material Domain to *Surface* and Blend Mode to *Opaque*
+
+5. **Create a Display Mesh**
+   - Use a Static Mesh (like a plane or TV screen model)
+   - Apply the material to display the stream
+
+6. **Blueprint Setup**
+   - In your Actor Blueprint:
+     - Add `Media Sound` and `Static Mesh` components
+     - Assign `MyMediaPlayer` to both the Media Sound and Media Texture
+     - Use the following logic:
+       - On BeginPlay:
+         - `Open Source` with the Stream Media Source
+         - Optionally bind to `OnMediaOpened` to then call `Play`
 
 ---
 
-### 🎬 Reference
+### 📽️ Tutorial Reference
 
-This setup is inspired by the [Tutorial RTSP Livestream Media in Unreal Engine](https://www.youtube.com/watch?v=nNNzUf3zNjM). The auto-start logic is now embedded in the included `BP_TV` actor for ease of use.
+This setup follows the approach in this tutorial:  
+🔗 [RTSP Livestream Media in Unreal Engine](https://www.youtube.com/watch?v=nNNzUf3zNjM)
+
+---
+
+### 📁 Directory Structure
+
+Your plugin should include the following (after packaging):
 
