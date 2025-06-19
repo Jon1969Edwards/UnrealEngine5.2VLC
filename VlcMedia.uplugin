@@ -17,19 +17,14 @@
 	"Modules": [
 		{
 			"Name": "VlcMedia",
-			"Type": "RuntimeNoCommandlet",
-			"LoadingPhase": "PreLoadingScreen",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
 			"PlatformAllowList": [
 				"Win64"
 			]
 		},
 		{
 			"Name": "VlcMediaEditor",
-			"Type": "Editor",
-			"LoadingPhase": "PostEngineInit"
-		},
-		{
-			"Name": "VlcMediaFactory",
 			"Type": "Editor",
 			"LoadingPhase": "PostEngineInit"
 		},
